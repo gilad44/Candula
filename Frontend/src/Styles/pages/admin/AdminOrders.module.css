@@ -1,0 +1,146 @@
+/* AdminOrders.module.css */
+
+.container {
+  padding: 1.5rem;
+  direction: rtl;
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box !important;
+  width: 100% !important;
+}
+
+/* Prevent white space at specific range */
+@media (min-width: 1127px) and (max-width: 1406px) {
+  .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 2rem !important;
+  font-weight: bold !important;
+  color: #333 !important;
+}
+
+.backButton {
+  border-color: rgba(127, 96, 0, 0.5) !important;
+  color: #7f6000 !important;
+  transition: all 0.3s ease !important;
+}
+
+.backButton:hover {
+  border-color: #7f6000 !important;
+  background-color: rgba(127, 96, 0, 0.05) !important;
+}
+
+.tableContainer {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 0.5rem !important;
+}
+
+.table {
+  min-width: 650px !important;
+}
+
+.tableHead {
+  background-color: #f5f5f5 !important;
+}
+
+.tableHeadCell {
+  font-weight: bold !important;
+  color: #333 !important;
+  text-align: right !important;
+}
+
+.tableRow {
+  transition: background-color 0.2s ease !important;
+}
+
+.tableRow:hover {
+  background-color: rgba(127, 96, 0, 0.05) !important;
+}
+
+.tableCell {
+  text-align: right !important;
+}
+
+.actionsCell {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.updateButton {
+  border-color: #7f6000 !important;
+  color: #7f6000 !important;
+  font-size: 0.875rem !important;
+}
+
+.updateButton:hover {
+  background-color: rgba(127, 96, 0, 0.05) !important;
+}
+
+.deleteButton {
+  border-color: #d32f2f !important;
+  color: #d32f2f !important;
+  font-size: 0.875rem !important;
+}
+
+.deleteButton:hover {
+  background-color: rgba(211, 47, 47, 0.05) !important;
+}
+
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.loadingText {
+  font-size: 1.25rem !important;
+  color: #666 !important;
+}
+
+.dialog {
+  direction: rtl !important;
+}
+
+.dialogTitle {
+  text-align: right !important;
+  font-weight: bold !important;
+}
+
+.dialogContent {
+  padding: 1rem 1.5rem !important;
+}
+
+.formControl {
+  width: 100% !important;
+  margin-top: 1rem !important;
+}
+
+.dialogActions {
+  padding: 1rem 1.5rem !important;
+  gap: 0.5rem;
+}
+
+.cancelButton {
+  color: #666 !important;
+}
+
+.confirmButton {
+  background: linear-gradient(to right, #7f6000, #cd853f) !important;
+  color: white !important;
+}
+
+.confirmButton:hover {
+  background: linear-gradient(to right, #654d00, #b8762f) !important;
+}

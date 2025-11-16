@@ -1,0 +1,38 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node .",
+    "dev": "cross-env NODE_ENV=development nodemon .",
+    "setup-admin": "cross-env NODE_ENV=development node scripts/setupAdmin.js",
+    "deploy-admin": "node scripts/deployAdmin.js",
+    "update-passwords": "node scripts/updatePasswords.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^10.1.0",
+    "nodemon": "^3.1.10"
+  },
+  "dependencies": {
+    "axios": "^1.11.0",
+    "bcryptjs": "^3.0.2",
+    "body-parser": "^2.2.0",
+    "chalk": "^4.1.1",
+    "config": "^4.1.1",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.1.0",
+    "express-slow-down": "^3.0.0",
+    "google-auth-library": "^10.4.2",
+    "helmet": "^8.1.0",
+    "joi": "^18.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "lodash": "^4.17.21",
+    "mongoose": "^8.17.1",
+    "morgan": "^1.10.1",
+    "nodemailer": "^7.0.9"
+  },
+  "description": ""
+}

@@ -1,0 +1,853 @@
+/* Navbar Container */
+.appBar {
+  margin-bottom: 0 !important;
+  width: 100vw !important;
+  height: 5rem !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: 0 !important;
+  border-radius: 0 !important;
+  max-width: 100% !important;
+  min-width: 100% !important;
+  background: linear-gradient(to left, black, #f7efa9ff) !important;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  z-index: 1200 !important;
+  overflow: hidden !important;
+}
+
+.appBarSmall {
+  height: 5rem !important;
+}
+
+/* Toolbar */
+.toolbar {
+  display: flex !important;
+  justify-content: space-between !important;
+  height: 5.5rem !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.toolbarPaddingSmall {
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
+}
+
+.toolbarPaddingMedium {
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+/* Logo Section */
+.logoBox {
+  text-decoration: none !important;
+  display: flex !important;
+  flex-shrink: 0 !important;
+  align-items: center !important;
+}
+
+.logoContainer {
+  flex-shrink: 0 !important;
+  flex-grow: 0 !important;
+  position: relative !important;
+  overflow: hidden !important;
+  border-radius: 50% !important;
+  box-shadow: 0 0 5px 3px #ffffe4ff !important;
+}
+
+/* Logo sizes for different breakpoints */
+.logoContainerXSmall {
+  width: 10vmax !important;
+  height: 10vmax !important;
+  margin-top: 0.6rem !important;
+  margin-bottom: 0.6rem !important;
+  margin-left: 1rem !important;
+}
+
+.logoContainerSmall {
+  width: 8vmax !important;
+  height: 8vmax !important;
+  margin-top: 0.7rem !important;
+  margin-bottom: 0.7rem !important;
+  margin-left: 1rem !important;
+}
+
+.logoContainerMedium {
+  width: 6vmax !important;
+  height: 6vmax !important;
+  margin-top: 0.7rem !important;
+  margin-bottom: 0.7rem !important;
+  margin-left: 1.5rem !important;
+}
+
+.logoContainerLarge {
+  width: 5vmax !important;
+  height: 5vmax !important;
+  margin-top: 0.8rem !important;
+  margin-bottom: 0.8rem !important;
+  margin-left: 1.5rem !important;
+}
+
+.logoContainerXLarge {
+  width: 4vmax !important;
+  height: 4vmax !important;
+  margin-top: 0.8rem !important;
+  margin-bottom: 0.8rem !important;
+  margin-left: 1.5rem !important;
+}
+
+.logoImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(2);
+}
+
+.logoTextContainer {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.titleName {
+  font-family: "dorian" !important;
+  margin-top: 0.7rem;
+  margin-right: 2rem;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgb(235, 200, 44) 0%,
+    rgba(255, 200, 0, 0.7) 10%,
+    rgba(255, 200, 0, 0.6) 12%,
+    rgba(255, 166, 0, 0.5) 17%,
+    rgba(255, 166, 0, 0.25) 21%,
+    rgba(255, 166, 0, 0.2) 25%,
+    rgba(255, 166, 0, 0.1) 28%,
+    rgba(255, 166, 0, 0.07) 32%,
+    transparent 35%,
+    transparent 100%
+  );
+  background-size: 310% 280%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: searchLightText 10s linear infinite;
+  color: transparent;
+}
+
+/* Title sizes */
+.titleNameXSmall {
+  font-size: 6vmax !important;
+}
+
+.titleNameSmall {
+  font-size: 4vmax !important;
+}
+
+.titleNameMedium {
+  font-size: 3vmax !important;
+}
+
+.titleNameLarge {
+  font-size: 2.1vmax !important;
+}
+
+.titleNameXLarge {
+  font-size: 2vmax !important;
+}
+
+.titleDescription {
+  font-family: "dorian" !important;
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+  margin-right: 2rem;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgb(235, 200, 44) 0%,
+    rgba(255, 200, 0, 0.7) 10%,
+    rgba(255, 200, 0, 0.6) 12%,
+    rgba(255, 166, 0, 0.5) 17%,
+    rgba(255, 166, 0, 0.25) 21%,
+    rgba(255, 166, 0, 0.2) 25%,
+    rgba(255, 166, 0, 0.1) 28%,
+    rgba(255, 166, 0, 0.07) 32%,
+    transparent 35%,
+    transparent 100%
+  );
+  background-size: 415% 280%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: searchLightText 13s linear infinite;
+}
+
+@keyframes searchLightText {
+  0% {
+    background-position: 0% 0%;
+  }
+  33% {
+    background-position: 33% 10%;
+  }
+  66% {
+    background-position: 66% 20%;
+  }
+  100% {
+    background-position: 100% 30%;
+  }
+}
+
+.titleDescriptionXSmall {
+  font-size: 3vmax !important;
+}
+
+.titleDescriptionMedium {
+  font-size: 1.6vmax !important;
+}
+
+.titleDescriptionLarge {
+  font-size: 1.4vmax !important;
+}
+
+/* Desktop Navigation */
+.desktopNav {
+  display: none !important;
+  gap: 1rem !important;
+  flex-grow: 1 !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  flex-direction: row !important;
+}
+
+.desktopNavVisible {
+  display: none !important;
+}
+
+/* Show desktop nav at 900px and above */
+@media (min-width: 900px) {
+  .desktopNavVisible {
+    display: flex !important;
+  }
+}
+
+/* Mobile Navigation */
+.mobileNav {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.mobileNavHidden {
+  display: flex !important;
+}
+
+/* Hide mobile nav at 900px and above */
+@media (min-width: 900px) {
+  .mobileNavHidden {
+    display: none !important;
+  }
+}
+
+/* Search Box */
+.searchBox {
+  display: flex !important;
+  align-items: center !important;
+  position: relative !important;
+  z-index: 10 !important;
+  margin-right: 1rem !important;
+}
+
+.searchInput {
+  background-color: rgba(255, 246, 209, 0.9) !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  border-radius: 1rem !important;
+  width: 15vmax !important;
+  height: 3vmax !important;
+  margin-right: 0.5rem !important;
+}
+
+.searchInput :global(.MuiCollapse-wrapperInner) {
+  direction: rtl !important;
+}
+
+.searchIconButton {
+  color: black !important;
+}
+
+/* Nav Links */
+.navButton {
+  font-weight: 600 !important;
+  font-size: 0.8rem !important;
+  color: #222 !important;
+  background-color: transparent !important;
+  border: 2px solid rgba(255, 250, 225, 1) !important;
+  border-radius: 1rem !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  margin-left: 0.25rem !important;
+  margin-right: 0.25rem !important;
+  min-width: 0 !important;
+  backdrop-filter: blur(2px) !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2) !important;
+  transition: all 0.3s ease !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* Extremely compact dimensions from 1127px up */
+@media (min-width: 1127px) {
+  .navButton {
+    font-size: 1.7rem !important;
+    padding: 0.6rem 2.5rem !important;
+    margin-left: 0.3rem !important;
+    margin-right: 0.3rem !important;
+    min-height: auto !important;
+    line-height: 1.3 !important;
+  }
+}
+
+/* Increase height from 1240px up */
+@media (min-width: 1240px) {
+  .navButton {
+    padding: 1.1rem 2.5rem !important;
+  }
+}
+
+/* Responsive scaling for navbar buttons */
+@media (max-width: 1537px) {
+  .navButton {
+    font-size: 0.7rem !important;
+    padding-left: 0.8rem !important;
+    padding-right: 0.8rem !important;
+    padding-top: 0.4rem !important;
+    padding-bottom: 0.4rem !important;
+    margin-left: 0.15rem !important;
+    margin-right: 0.15rem !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .navButton {
+    font-size: 0.65rem !important;
+    padding-left: 0.6rem !important;
+    padding-right: 0.6rem !important;
+    padding-top: 0.35rem !important;
+    padding-bottom: 0.35rem !important;
+    margin-left: 0.1rem !important;
+    margin-right: 0.1rem !important;
+  }
+}
+
+.navButton:hover {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  color: #222 !important;
+  border: 2px solid rgba(247, 229, 126, 1) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+  transform: translateY(-2px) !important;
+}
+
+.navButtonActive {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* User Menu */
+.userMenuBox {
+  display: flex !important;
+  justify-content: center !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+  border-radius: 1rem !important;
+  background-color: rgba(255, 255, 255, 0.41) !important;
+  margin-left: 0.25rem !important;
+  margin-right: 0.25rem !important;
+  padding: 0 !important;
+  backdrop-filter: blur(2px) !important;
+}
+
+.userMenuButton {
+  font-weight: 600 !important;
+  font-size: 0.8rem !important;
+  color: #222 !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  min-width: 0 !important;
+}
+
+/* Extremely compact dimensions from 1127px up */
+@media (min-width: 1127px) {
+  .userMenuButton {
+    font-size: 0.4rem !important;
+    padding: 0.02rem 0.2rem !important;
+    margin-left: 0.05rem !important;
+    margin-right: 0.05rem !important;
+    min-height: auto !important;
+    line-height: 1.1 !important;
+  }
+
+  .userMenuBox {
+    margin-left: 0.02rem !important;
+    margin-right: 0.02rem !important;
+  }
+}
+
+/* Responsive scaling for user menu */
+@media (max-width: 1537px) {
+  .userMenuBox {
+    margin-left: 0.15rem !important;
+    margin-right: 0.15rem !important;
+  }
+
+  .userMenuButton {
+    font-size: 0.7rem !important;
+    padding-left: 0.8rem !important;
+    padding-right: 0.8rem !important;
+    padding-top: 0.4rem !important;
+    padding-bottom: 0.4rem !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .userMenuBox {
+    margin-left: 0.1rem !important;
+    margin-right: 0.1rem !important;
+  }
+
+  .userMenuButton {
+    font-size: 0.65rem !important;
+    padding-left: 0.6rem !important;
+    padding-right: 0.6rem !important;
+    padding-top: 0.35rem !important;
+    padding-bottom: 0.35rem !important;
+  }
+}
+
+.userMenuPaper {
+  background: linear-gradient(
+    to bottom,
+    rgba(209, 197, 91, 1),
+    black
+  ) !important;
+  border-radius: 1rem !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+}
+
+.userMenuItem {
+  color: white !important;
+  font-weight: 500 !important;
+  font-size: 1.25rem !important;
+  padding: 1rem 2.2rem !important;
+}
+
+.userMenuItem:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.logoutMenuItem {
+  color: white !important;
+  font-weight: 500 !important;
+  font-size: 1.25rem !important;
+  padding: 1rem 2.2rem !important;
+}
+
+.logoutMenuItem:hover {
+  background-color: rgba(211, 47, 47, 0.1) !important;
+}
+
+/* Responsive scaling for dropdown menu items to match navbar buttons */
+@media (max-width: 1537px) {
+  .userMenuItem,
+  .logoutMenuItem {
+    font-size: 1.1rem !important;
+    padding: 0.85rem 1.7rem !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .userMenuItem,
+  .logoutMenuItem {
+    font-size: 1rem !important;
+    padding: 0.7rem 1.3rem !important;
+  }
+}
+
+/* Auth Button */
+.authBox {
+  display: flex !important;
+  justify-content: center !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+  border-radius: 1rem !important;
+  background-color: #ffffff69 !important;
+  margin-left: 0.25rem !important;
+  margin-right: 0.25rem !important;
+  padding: 0 !important;
+  backdrop-filter: blur(2px) !important;
+}
+
+.authButton {
+  font-weight: 600 !important;
+  font-size: 0.8rem !important;
+  color: #222 !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  min-width: 0 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* Extremely compact dimensions from 1127px up */
+@media (min-width: 1127px) {
+  .authButton {
+    font-size: 0.4rem !important;
+    padding: 0.02rem 0.2rem !important;
+    margin-left: 0.05rem !important;
+    margin-right: 0.05rem !important;
+    min-height: auto !important;
+    line-height: 1.1 !important;
+  }
+
+  .authBox {
+    margin-left: 0.02rem !important;
+    margin-right: 0.02rem !important;
+  }
+}
+
+/* Responsive scaling for auth button */
+@media (max-width: 1537px) {
+  .authBox {
+    margin-left: 0.15rem !important;
+    margin-right: 0.15rem !important;
+  }
+
+  .authButton {
+    font-size: 0.7rem !important;
+    padding-left: 0.8rem !important;
+    padding-right: 0.8rem !important;
+    padding-top: 0.4rem !important;
+    padding-bottom: 0.4rem !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .authBox {
+    margin-left: 0.1rem !important;
+    margin-right: 0.1rem !important;
+  }
+
+  .authButton {
+    font-size: 0.65rem !important;
+    padding-left: 0.6rem !important;
+    padding-right: 0.6rem !important;
+    padding-top: 0.35rem !important;
+    padding-bottom: 0.35rem !important;
+  }
+}
+
+/* Cart Button */
+.cartButton {
+  display: flex !important;
+  align-items: center !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+}
+
+.cartIcon {
+  color: black !important;
+  font-size: 2rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* Cart Drawer */
+.cartDrawerPaper {
+  background: linear-gradient(to top, black, rgb(247, 239, 169)) !important;
+  border-radius: 200px / 40px !important;
+  box-shadow: inset 10px 0 40px rgba(255, 255, 255, 0.9),
+    inset -20px 0 40px rgba(0, 0, 0, 0.15),
+    inset 10px 0 40px rgba(255, 255, 255, 0.9) !important;
+  width: 20vmax !important;
+}
+
+.cartDrawerContent {
+  width: 100% !important;
+  height: 100vh !important;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.cartDrawerContent::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* Mobile Navigation */
+.mobileNav {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.mobileNavHidden {
+  display: flex !important;
+}
+
+/* Hide mobile nav at 900px and above */
+@media (min-width: 900px) {
+  .mobileNavHidden {
+    display: none !important;
+  }
+}
+
+.menuIconButton {
+  color: inherit !important;
+}
+
+.menuIcon {
+  margin-top: 2vmax !important;
+  width: 7vmax !important;
+  height: 7vmax !important;
+  color: black !important;
+}
+
+/* Smaller menu icon on tablets */
+@media (min-width: 600px) and (max-width: 899px) {
+  .menuIcon {
+    margin-top: 0 !important;
+    width: 5vmax !important;
+    height: 5vmax !important;
+  }
+}
+
+.cartButtonMobile {
+  margin-left: 0.5rem !important;
+  margin-top: 1vmax !important;
+}
+
+/* Adjust cart button on tablets */
+@media (min-width: 600px) and (max-width: 899px) {
+  .cartButtonMobile {
+    margin-top: 0 !important;
+  }
+}
+
+.cartIconMobile {
+  color: black !important;
+  font-size: 7vmax !important;
+}
+
+/* Smaller cart icon on tablets */
+@media (min-width: 600px) and (max-width: 899px) {
+  .cartIconMobile {
+    font-size: 5vmax !important;
+  }
+}
+
+/* Mobile Search */
+.mobileSearchBox {
+  display: flex !important;
+  align-items: center !important;
+  position: absolute !important;
+  right: 32vmax !important;
+  top: 4.5vmax !important;
+}
+
+.mobileSearchBoxSmall {
+  right: 25vmax !important;
+  top: 2.5vmax !important;
+}
+
+.mobileSearchInput {
+  background-color: rgba(255, 246, 209, 0.9) !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  border-radius: 1rem !important;
+  width: 25vmax !important;
+  height: 5.5vmax !important;
+  margin-left: 0.5rem !important;
+}
+
+.mobileSearchIconButton {
+  color: black !important;
+  margin-right: -10vmax !important;
+}
+
+/* Mobile Drawer */
+.mobileDrawerPaper {
+  width: 240px !important;
+}
+
+.drawerListItemText {
+  text-align: right !important;
+}
+
+.userMenuHeaderText {
+  text-align: left !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.userMenuHeaderText :global(.MuiListItemText-primary) {
+  font-weight: bold !important;
+  font-size: 1.1rem !important;
+  color: #333 !important;
+}
+
+.userMenuSubItem {
+  padding-left: 1rem !important;
+}
+
+.logoutText {
+  text-align: right !important;
+}
+
+.logoutText :global(.MuiListItemText-primary) {
+  color: #d32f2f !important;
+}
+
+/* Auth Form Overlay */
+.authOverlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background-color: transparent !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: flex-start !important;
+}
+
+.authOverlayVisible {
+  z-index: 1400 !important;
+  pointer-events: auto !important;
+}
+
+.authOverlayHidden {
+  z-index: -1 !important;
+  pointer-events: none !important;
+}
+
+.authFormBox {
+  width: 400px !important;
+  max-height: 90vh !important;
+  overflow-y: auto !important;
+  background: linear-gradient(to top, black, rgb(247, 239, 169)) !important;
+  padding: 1rem !important;
+  border-radius: 200px / 30px !important;
+  box-shadow: inset 20px 0 40px rgba(255, 255, 255, 0.9),
+    inset -20px 0 40px rgba(0, 0, 0, 0.15),
+    inset 40px 0 40px rgba(0, 0, 0, 0.15),
+    inset 20px 0 40px rgba(255, 255, 255, 0.9) !important;
+  transform: perspective(1000px) !important;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.authFormBox::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* RTL Input Fixes (global selectors for MUI) */
+:global(.MuiInputLabel-root) {
+  right: 14px !important;
+  left: unset !important;
+  transform-origin: top right !important;
+}
+
+:global(.MuiInputLabel-shrink) {
+  transform: translate(0, -9px) scale(0.75) !important;
+  transform-origin: top right !important;
+}
+
+:global(.MuiSelect-select) {
+  text-align: right !important;
+  padding-right: 14px !important;
+  padding-left: 32px !important;
+}
+
+:global(.MuiSelect-icon) {
+  left: 7px !important;
+  right: unset !important;
+}
+
+/* Compact navbar for 1127-1240px range */
+
+/* Large screens (1900px+) - increase navbar height to accommodate content */
+@media (min-width: 1900px) {
+  .appBar {
+    height: clamp(5rem, calc(0.5vh + 4rem), 12rem) !important;
+    min-height: 6rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
+  .toolbar {
+    height: clamp(5.5rem, calc(0.5vh + 4.5rem), 12.5rem) !important;
+    min-height: 6.5rem !important;
+    align-items: center !important;
+    padding-bottom: 1rem !important;
+  }
+
+  .logoBox {
+    align-items: center !important;
+  }
+
+  .logoContainer,
+  .logoContainerXLarge {
+    width: 70px !important;
+    height: 70px !important;
+    max-width: 70px !important;
+    max-height: 70px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    margin-left: 2rem !important;
+    margin-right: 0 !important;
+  }
+
+  .logoTextContainer {
+    margin-left: 0 !important;
+    margin-right: 2rem !important;
+  }
+
+  .titleName,
+  .titleNameXLarge {
+    font-size: 32px !important;
+    margin-top: 0 !important;
+  }
+
+  .titleDescription,
+  .titleDescriptionLarge {
+    font-size: 20px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+}
+
+@media (min-width: 2200px) {
+  .appBar {
+    height: clamp(6rem, calc(0.8vh + 5rem), 15rem) !important;
+    min-height: 7rem !important;
+  }
+
+  .toolbar {
+    height: clamp(6.5rem, calc(0.8vh + 5.5rem), 15.5rem) !important;
+    min-height: 7.5rem !important;
+  }
+}

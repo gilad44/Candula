@@ -1,0 +1,133 @@
+/* Main Container */
+.container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+  text-align: right;
+  direction: rtl;
+}
+
+/* Main Title */
+.mainTitle {
+  color: #7f6000;
+  font-weight: bold !important;
+  background: linear-gradient(45deg, #7f6000, #cd853f, #ffd700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Subtitle */
+.subtitle {
+  margin-top: 2rem !important;
+  color: #7f6000;
+  font-weight: 600 !important;
+  font-family: Arial, sans-serif;
+}
+
+.subtitleSpan {
+  font-family: Arial, sans-serif;
+}
+
+/* Section Titles */
+.sectionTitle {
+  margin-top: 2rem !important;
+  margin-bottom: 0.5rem !important;
+  color: #7f6000;
+  font-weight: 600 !important;
+}
+
+/* Paragraphs */
+.paragraph {
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #333;
+  direction: rtl;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.inlineEnglish {
+  display: inline-block;
+  direction: ltr;
+}
+
+/* Info Boxes Grid */
+.infoGrid {
+  display: grid !important;
+  gap: 3rem !important;
+  margin-top: 2.5rem !important;
+  margin-bottom: 2.5rem !important;
+  justify-content: start !important;
+  align-items: stretch !important;
+  justify-items: start !important;
+  max-width: 1000px !important;
+  margin-left: 2rem !important;
+  margin-right: auto !important;
+  width: 100% !important;
+  padding: 0 2rem !important;
+}
+
+/* Adjust for 1127px+ to move more left */
+@media (min-width: 1127px) and (max-width: 2111px) {
+  .infoGrid {
+    justify-content: start !important;
+    justify-items: start !important;
+    margin-left: 4rem !important;
+    margin-right: auto !important;
+  }
+}
+
+/* Centered for very large screens */
+@media (min-width: 2112px) {
+  .infoGrid {
+    justify-content: center !important;
+    justify-items: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 1200px !important;
+  }
+}
+
+@media (min-width: 900px) {
+  .infoGrid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media (max-width: 899px) {
+  .infoGrid {
+    grid-template-columns: 1fr !important;
+    max-width: 600px !important;
+    padding: 0 1rem !important;
+  }
+}
+
+/* Info Box */
+.infoBox {
+  padding: 2rem !important;
+  border-radius: 1.5rem !important;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 253, 231, 0.8),
+    rgba(247, 239, 169, 0.6)
+  ) !important;
+  box-shadow: 0 4px 15px rgba(127, 96, 0, 0.1) !important;
+  text-align: center !important;
+  width: 100% !important;
+  min-width: 300px !important;
+  max-width: 450px !important;
+  height: 100% !important;
+}
+
+.infoBoxTitle {
+  margin-bottom: 0.75rem !important;
+  color: #7f6000;
+  font-weight: bold !important;
+}
+
+.infoBoxContent {
+  line-height: 1.8 !important;
+  direction: rtl;
+}

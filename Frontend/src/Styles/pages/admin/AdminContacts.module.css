@@ -1,0 +1,262 @@
+/* AdminContacts.module.css */
+
+.container {
+  padding: 1.5rem;
+  direction: rtl;
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box !important;
+  width: 100% !important;
+}
+
+/* Prevent white space at specific range */
+@media (min-width: 1127px) and (max-width: 1406px) {
+  .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 2rem !important;
+  font-weight: bold !important;
+  color: #333 !important;
+}
+
+.filtersCard {
+  margin-bottom: 1.5rem !important;
+}
+
+.filtersContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 600px) {
+  .filtersContent {
+    flex-direction: row;
+  }
+}
+
+.filterBox {
+  flex: 1;
+  min-width: 200px;
+}
+
+.formControl {
+  width: 100% !important;
+  direction: rtl !important;
+}
+
+.select {
+  text-align: right !important;
+}
+
+.resetButton {
+  width: 100% !important;
+  border-color: rgba(127, 96, 0, 0.5) !important;
+  color: #7f6000 !important;
+}
+
+.resetButton:hover {
+  border-color: #7f6000 !important;
+  background-color: rgba(127, 96, 0, 0.05) !important;
+}
+
+.tableContainer {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 0.5rem !important;
+}
+
+.table {
+  min-width: 800px !important;
+}
+
+.tableHead {
+  background-color: #f5f5f5 !important;
+}
+
+.tableHeadCell {
+  font-weight: bold !important;
+  color: #333 !important;
+  text-align: right !important;
+}
+
+.tableRow {
+  transition: background-color 0.2s ease !important;
+}
+
+.tableRow:hover {
+  background-color: rgba(127, 96, 0, 0.05) !important;
+}
+
+.tableCell {
+  text-align: right !important;
+}
+
+.loadingCell {
+  text-align: center !important;
+  padding: 2rem 1rem !important;
+}
+
+.emptyCell {
+  text-align: center !important;
+  padding: 2rem 1rem !important;
+}
+
+.actionsCell {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.iconButton {
+  color: #7f6000 !important;
+  transition: all 0.2s ease !important;
+}
+
+.iconButton:hover {
+  background-color: rgba(127, 96, 0, 0.1) !important;
+}
+
+.deleteIconButton {
+  color: #d32f2f !important;
+}
+
+.deleteIconButton:hover {
+  background-color: rgba(211, 47, 47, 0.1) !important;
+}
+
+.noAccessContainer {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.noAccessTitle {
+  font-size: 1.5rem !important;
+  font-weight: bold !important;
+  color: #d32f2f !important;
+}
+
+.noAccessText {
+  margin-top: 1rem !important;
+  color: #666 !important;
+}
+
+.dialog {
+  direction: rtl !important;
+}
+
+.dialogTitle {
+  direction: rtl !important;
+  text-align: right !important;
+  font-weight: bold !important;
+}
+
+.dialogContent {
+  direction: rtl !important;
+  padding: 1rem 1.5rem !important;
+}
+
+.viewContactBox {
+  direction: rtl;
+}
+
+.viewContactSubject {
+  margin-bottom: 1rem !important;
+  font-weight: bold !important;
+}
+
+.viewContactDetail {
+  margin-bottom: 0.5rem !important;
+  color: #666 !important;
+}
+
+.viewContactMessage {
+  margin-bottom: 1rem !important;
+  font-weight: bold !important;
+}
+
+.messagePaper {
+  padding: 1rem !important;
+  background-color: #f5f5f5 !important;
+}
+
+.messageText {
+  font-size: 0.875rem !important;
+  line-height: 1.6 !important;
+}
+
+.adminNotesTitle {
+  margin-bottom: 0.5rem !important;
+  margin-top: 1rem !important;
+  font-weight: bold !important;
+}
+
+.adminNotesPaper {
+  padding: 1rem !important;
+  background-color: #fff9e6 !important;
+}
+
+.statusUpdateBox {
+  direction: rtl;
+  margin-top: 1rem !important;
+}
+
+.statusFormControl {
+  width: 100% !important;
+  margin-bottom: 1.5rem !important;
+  direction: rtl !important;
+}
+
+.notesField {
+  width: 100% !important;
+  direction: rtl !important;
+}
+
+.deleteDialogContent {
+  direction: rtl !important;
+}
+
+.dialogActions {
+  padding: 1rem 1.5rem !important;
+  gap: 0.5rem;
+}
+
+.cancelButton {
+  color: #666 !important;
+}
+
+.confirmButton {
+  background: linear-gradient(to right, #7f6000, #cd853f) !important;
+  color: white !important;
+}
+
+.confirmButton:hover {
+  background: linear-gradient(to right, #654d00, #b8762f) !important;
+}
+
+.replyButton {
+  background: linear-gradient(to right, #1976d2, #42a5f5) !important;
+  color: white !important;
+}
+
+.replyButton:hover {
+  background: linear-gradient(to right, #1565c0, #1976d2) !important;
+}
+
+.deleteConfirmButton {
+  background: linear-gradient(to right, #d32f2f, #f44336) !important;
+  color: white !important;
+}
+
+.deleteConfirmButton:hover {
+  background: linear-gradient(to right, #b71c1c, #d32f2f) !important;
+}

@@ -1,0 +1,66 @@
+/* Main Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* 404 Number */
+.errorNumber {
+  font-size: 8rem !important;
+  font-weight: bold !important;
+  background: linear-gradient(45deg, #7f6000, #cd853f, #ffd700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem !important;
+}
+
+/* Error Title */
+.errorTitle {
+  color: #7f6000;
+  margin-bottom: 1rem !important;
+  font-weight: 600 !important;
+}
+
+/* Error Message */
+.errorMessage {
+  color: #666;
+  margin-bottom: 2rem !important;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+/* Buttons Container */
+.buttonsContainer {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Primary Button */
+.primaryButton {
+  background: linear-gradient(45deg, #7f6000, #cd853f) !important;
+  padding: 0.75rem 1.5rem !important;
+}
+
+.primaryButton:hover {
+  background: linear-gradient(45deg, #654d00, #b8762f) !important;
+}
+
+/* Secondary Button */
+.secondaryButton {
+  color: #7f6000 !important;
+  border-color: #7f6000 !important;
+  padding: 0.75rem 1.5rem !important;
+}
+
+.secondaryButton:hover {
+  border-color: #654d00 !important;
+  color: #654d00 !important;
+}

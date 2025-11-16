@@ -1,0 +1,59 @@
+/* Container */
+.container {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+}
+
+/* Paper */
+.paper {
+  padding: 2rem !important;
+  border-radius: 1.5rem !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Title */
+.title {
+  text-align: center !important;
+  font-family: "Dana" !important;
+  color: #2d3436 !important;
+  margin-bottom: 2rem !important;
+}
+
+/* Divider */
+.divider {
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+}
+
+/* AI Success Alert */
+.aiSuccessAlert {
+  margin-top: 1rem !important;
+  margin-bottom: 1.5rem !important;
+  font-family: "Dana" !important;
+}
+
+/* Submit Button Container */
+.submitButtonContainer {
+  margin-top: 2rem !important;
+  text-align: center !important;
+}
+
+/* Submit Button */
+.submitButton {
+  background-color: #27ae60 !important;
+  font-family: "Dana" !important;
+  font-size: 1.2rem !important;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+}
+
+.submitButton:hover {
+  background-color: #219a52 !important;
+}
+
+.submitButton:disabled {
+  background-color: rgba(0, 0, 0, 0.12) !important;
+  color: rgba(0, 0, 0, 0.26) !important;
+}

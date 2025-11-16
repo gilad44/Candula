@@ -1,0 +1,93 @@
+/* Main Container */
+.container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5rem;
+}
+
+/* Page Title */
+.pageTitle {
+  margin-bottom: 2rem !important;
+}
+
+/* Card Section Title */
+.sectionTitle {
+  margin-bottom: 1.5rem !important;
+}
+
+/* Header Box (title + button) */
+.headerBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Text Field - RTL specific styling */
+.textField {
+  text-align: right;
+  direction: rtl;
+}
+
+/* Action Buttons Container */
+.actionButtons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  direction: rtl;
+}
+
+/* Preferences Section */
+.preferenceItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  direction: rtl;
+}
+
+.preferenceList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  direction: rtl;
+}
+
+.preferencesSection {
+  margin-bottom: 1.5rem;
+}
+
+.preferenceSaveButton {
+  margin-top: 1.5rem;
+  direction: rtl;
+}
+
+/* Statistics */
+.statsBox {
+  text-align: center;
+  direction: rtl;
+}
+
+.statsNumber {
+  font-size: 2.125rem !important;
+  font-weight: 400 !important;
+}
+
+.statsLabel {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* Not Logged In State */
+.notLoggedIn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+  direction: rtl;
+}
+
+.notLoggedInTitle {
+  margin-bottom: 1rem !important;
+}

@@ -1,0 +1,281 @@
+/* Main Container */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 4rem;
+}
+
+/* Hero Logo Section */
+.heroLogo {
+  position: relative;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background: radial-gradient(
+    circle,
+    orange 100%,
+    #ff4000a9 40%,
+    #d0c11bc8 60%
+  );
+  border-radius: 50%;
+  box-shadow: 0 0 20px 5px #d8cc99, 0 0 40px 15px #d8cc99,
+    5px 5px 60px 30px #d8cc99, inset 0 0 60px #d8cc99;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.heroLogo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at center 75%,
+    #ff7b00a6 5%,
+    #ded308ff 65%,
+    #676314ce 90%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.logoImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(3);
+}
+
+/* Title Overlay */
+.titleOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+  width: 400px;
+  white-space: nowrap;
+}
+
+.mainTitle {
+  font-family: dorian !important;
+  font-weight: 600 !important;
+  font-size: 70px !important;
+  letter-spacing: 0.7px;
+  background: linear-gradient(90deg, orange, #c7c736ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0px 7px 8px rgba(0, 0, 0, 0.6);
+  -webkit-text-stroke: 1px;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 40px !important;
+}
+
+/* Medium size for tablets and small desktops */
+@media (min-width: 1127px) and (max-width: 1239px) {
+  .subtitle {
+    font-size: 50px !important;
+  }
+}
+
+/* Keep smaller size for large screens */
+@media (min-width: 1240px) {
+  .subtitle {
+    font-size: 45px !important;
+  }
+}
+
+/* Featured Products Section */
+.featuredSection {
+  width: 70%;
+  max-width: 1200px;
+  z-index: 50;
+  pointer-events: none;
+  margin-top: 2.5rem;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  position: relative !important;
+  left: 0 !important;
+  right: 0 !important;
+}
+
+/* Ensure proper centering in problematic range */
+@media (min-width: 1127px) and (max-width: 1406px) {
+  .featuredSection {
+    width: 85% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+    text-align: center !important;
+  }
+}
+
+.productsGrid {
+  display: grid;
+  gap: 4rem;
+  width: 100%;
+  justify-items: center !important;
+  align-items: center !important;
+}
+
+@media (max-width: 899px) {
+  .productsGrid {
+    grid-template-columns: repeat(2, minmax(150px, 1fr)) !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+  }
+}
+
+@media (min-width: 900px) {
+  .productsGrid {
+    grid-template-columns: repeat(4, minmax(150px, 200px)) !important;
+    justify-content: center !important;
+    max-width: 900px !important;
+    margin: 0 auto !important;
+  }
+}
+
+/* Product Card */
+.productCard {
+  width: 100% !important;
+  max-width: 200px !important;
+  min-width: 150px !important;
+  aspect-ratio: 1/1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  border: 4px ridge goldenrod !important;
+  border-radius: 50% !important;
+  box-shadow: -4px -1px 20px rgba(0, 0, 0, 0.58) !important;
+  background-color: rgba(58, 58, 58, 0.9) !important;
+  cursor: pointer !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  pointer-events: auto !important;
+  position: relative !important;
+}
+
+.productCard:hover {
+  transform: scale(1.05);
+  box-shadow: -4px -4px 20px rgba(255, 237, 132, 0.54);
+}
+
+.productImageContainer {
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  border-radius: 50% !important;
+}
+
+.productImage {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+/* CTA Button */
+.ctaContainer {
+  margin-top: 4rem;
+  border-radius: 5rem;
+  pointer-events: none;
+}
+
+.ctaButton {
+  background: radial-gradient(
+    circle,
+    #ff7b00a6 10%,
+    #ded308ff 35%,
+    #676314ce 90%
+  ) !important;
+  border: 3px ridge gold !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 5rem !important;
+  font-weight: 700 !important;
+  font-family: dorian !important;
+  text-decoration: none !important;
+  /* transition: background 0.2s !important; */
+  pointer-events: auto !important;
+  gap: 0.2rem !important;
+  position: relative !important;
+  z-index: 3 !important;
+  overflow: hidden !important;
+}
+
+/* Default (3xs breakpoint) */
+.ctaButton {
+  font-size: 1.3rem !important;
+  width: 28vmax !important;
+  height: 7vmax !important;
+}
+
+/* Small screens (sm: 600px+) */
+@media (min-width: 600px) {
+  .ctaButton {
+    font-size: 2rem !important;
+    width: 25vmax !important;
+    height: 5vmax !important;
+  }
+}
+
+/* Medium screens (md: 900px+) */
+@media (min-width: 900px) {
+  .ctaButton {
+    width: 15vmax !important;
+  }
+}
+
+.ctaText {
+  background: orange;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0px 0px 4px rgba(103, 57, 10, 1);
+  -webkit-text-stroke: 0.4px;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.ctaArrow {
+  color: rgb(255, 221, 162);
+  font-size: 2.5rem;
+  margin-top: -0.4rem;
+}
+
+/* Increase text size for large screens - must be at end for proper cascade */
+@media (min-width: 1127px) {
+  .ctaButton {
+    font-size: 0 !important; /* Reset button font size */
+  }
+
+  .ctaButton .ctaText {
+    font-size: 4rem !important;
+    line-height: 1 !important;
+  }
+}
+
+/* Reduce text size for extra large screens */
+@media (min-width: 1240px) {
+  .ctaButton .ctaText {
+    font-size: 2.5rem !important;
+    line-height: 1 !important;
+  }
+}

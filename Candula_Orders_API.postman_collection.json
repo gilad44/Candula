@@ -1,0 +1,187 @@
+{
+  "info": {
+    "name": "Candula Orders API",
+    "description": "API endpoints for managing orders in the Candula application",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{auth_token}}",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8180/api",
+      "type": "string"
+    },
+    {
+      "key": "auth_token",
+      "value": "YOUR_JWT_TOKEN_HERE",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Authentication",
+      "item": [
+        {
+          "name": "Login User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"user@example.com\",\n  \"password\": \"yourpassword\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/users/login",
+              "host": ["{{base_url}}"],
+              "path": ["users", "login"]
+            },
+            "description": "Login to get JWT token for authentication"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Orders",
+      "item": [
+        {
+          "name": "Create Order",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-auth-token",
+                "value": "{{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"items\": [\n    {\n      \"productId\": \"66b3e123456789abcdef1234\",\n      \"quantity\": 2,\n      \"price\": 89.99,\n      \"selectedVariant\": {\n        \"color\": \"לבן\",\n        \"size\": \"בינוני\"\n      }\n    }\n  ],\n  \"totalAmount\": 179.98,\n  \"shippingAddress\": {\n    \"firstName\": \"ישראל\",\n    \"lastName\": \"ישראלי\",\n    \"street\": \"הרצל 123\",\n    \"city\": \"תל אביב\",\n    \"postalCode\": \"12345\",\n    \"phone\": \"0501234567\"\n  },\n  \"paymentMethod\": \"credit_card\",\n  \"shippingMethod\": \"standard\",\n  \"notes\": \"אנא השאירו ליד הדלת\",\n  \"shippingCost\": 15,\n  \"tax\": 30.6\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/orders",
+              "host": ["{{base_url}}"],
+              "path": ["orders"]
+            },
+            "description": "Create a new order"
+          }
+        },
+        {
+          "name": "Get My Orders",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "x-auth-token",
+                "value": "{{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/orders/my",
+              "host": ["{{base_url}}"],
+              "path": ["orders", "my"]
+            },
+            "description": "Get current user's orders"
+          }
+        },
+        {
+          "name": "Get Order by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "x-auth-token",
+                "value": "{{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/orders/{{order_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["orders", "{{order_id}}"]
+            },
+            "description": "Get specific order by ID"
+          }
+        },
+        {
+          "name": "Get All Orders (Admin)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "x-auth-token",
+                "value": "{{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/orders",
+              "host": ["{{base_url}}"],
+              "path": ["orders"]
+            },
+            "description": "Get all orders (admin only)"
+          }
+        },
+        {
+          "name": "Update Order Status (Admin)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-auth-token",
+                "value": "{{auth_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"confirmed\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/orders/{{order_id}}/status",
+              "host": ["{{base_url}}"],
+              "path": ["orders", "{{order_id}}", "status"]
+            },
+            "description": "Update order status (admin only). Valid statuses: pending, confirmed, processing, shipped, delivered, cancelled"
+          }
+        },
+        {
+          "name": "Delete Order (Admin)",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "x-auth-token",
+                "value": "{{auth_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/orders/{{order_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["orders", "{{order_id}}"]
+            },
+            "description": "Delete order (admin only)"
+          }
+        }
+      ]
+    }
+  ]
+}

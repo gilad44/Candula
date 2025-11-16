@@ -1,0 +1,74 @@
+/* Container */
+.container {
+  padding: 1.5rem !important;
+  min-height: 100vh !important;
+  background-color: #fafafa !important;
+  direction: rtl !important;
+}
+
+/* Title */
+.title {
+  margin-bottom: 1rem !important;
+}
+
+/* Welcome Message */
+.welcomeMessage {
+  color: rgba(0, 0, 0, 0.6) !important;
+  margin-bottom: 2rem !important;
+}
+
+/* Actions Grid */
+.actionsGrid {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 1.5rem !important;
+}
+
+.actionBox {
+  flex: 1 1 300px !important;
+  min-width: 300px !important;
+}
+
+.actionCard {
+  height: 100% !important;
+  transition: transform 0.2s, box-shadow 0.2s !important;
+}
+
+.actionCard:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12) !important;
+}
+
+.actionCardContent {
+  text-align: center !important;
+}
+
+.iconContainer {
+  margin-bottom: 1rem !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.actionTitle {
+  margin-bottom: 0.5rem !important;
+}
+
+.actionDescription {
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Info Box */
+.infoBox {
+  margin-top: 2rem !important;
+  padding: 1.5rem !important;
+  background-color: white !important;
+  border-radius: 0.5rem !important;
+}
+
+.infoTitle {
+  margin-bottom: 0.5rem !important;
+}
+
+.infoText {
+  color: rgba(0, 0, 0, 0.6) !important;
+}

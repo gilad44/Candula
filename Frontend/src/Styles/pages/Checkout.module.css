@@ -1,0 +1,316 @@
+/* Checkout Page Container */
+.checkoutPage {
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding: 1.5rem !important;
+  direction: rtl !important;
+}
+
+.checkoutPage * {
+  direction: rtl !important;
+}
+
+/* Page Title */
+.pageTitle {
+  margin-bottom: 2rem !important;
+  text-align: center !important;
+  direction: rtl !important;
+}
+
+/* Stepper */
+.stepper {
+  margin-bottom: 2rem !important;
+  direction: rtl !important;
+}
+
+.stepper :global(.MuiStepConnector-root) {
+  transform: scaleX(-1) !important;
+}
+
+.stepper :global(.MuiStepLabel-root) {
+  flex-direction: row !important;
+}
+
+.stepper :global(.MuiStepLabel-labelContainer) {
+  text-align: right !important;
+}
+
+.stepper :global(.MuiStepLabel-label) {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* Main Content Layout */
+.mainContent {
+  display: flex !important;
+  gap: 1.5rem !important;
+  flex-direction: column !important;
+  direction: rtl !important;
+}
+
+@media (min-width: 900px) {
+  .mainContent {
+    flex-direction: row-reverse !important;
+  }
+}
+
+/* Form Section */
+.formSection {
+  flex: 2 !important;
+}
+
+@media (min-width: 900px) {
+  .formSection {
+    flex: 2 !important;
+  }
+}
+
+.formPaper {
+  padding: 1.5rem !important;
+  direction: rtl !important;
+}
+
+.sectionTitle {
+  margin-bottom: 1.5rem !important;
+}
+
+.formGrid {
+  display: grid !important;
+  gap: 1rem !important;
+  grid-template-columns: 1fr !important;
+}
+
+@media (min-width: 600px) {
+  .formGrid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+.fullWidth {
+  grid-column: 1 / -1 !important;
+}
+
+.marginTop {
+  margin-top: 1rem !important;
+}
+
+/* TextField RTL Fixes */
+.checkoutPage :global(.MuiTextField-root) :global(.MuiInputBase-input),
+.checkoutPage :global(.MuiTextField-root) :global(.MuiOutlinedInput-input) {
+  text-align: right !important;
+  direction: rtl !important;
+  padding-right: 14px !important;
+  padding-left: 14px !important;
+}
+
+.checkoutPage :global(.MuiTextField-root) :global(.MuiInputLabel-root) {
+  right: 14px !important;
+  left: auto !important;
+  transform-origin: top right !important;
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+.checkoutPage :global(.MuiTextField-root) :global(.MuiInputLabel-shrink) {
+  transform: translate(0, -9px) scale(0.75) !important;
+  right: 14px !important;
+  left: auto !important;
+  transform-origin: top right !important;
+}
+
+.checkoutPage :global(.MuiTextField-root) textarea {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+.checkoutPage :global(.MuiFormHelperText-root) {
+  text-align: right !important;
+  margin-right: 14px !important;
+  margin-left: 0 !important;
+  direction: rtl !important;
+}
+
+.checkoutPage :global(.MuiTypography-root) {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+/* Radio Group */
+.radioGroup {
+  direction: rtl !important;
+}
+
+.radioLabel {
+  margin-left: 0 !important;
+  margin-right: -11px !important;
+}
+
+/* Payment Method Cards */
+.paymentMethodsGrid {
+  display: grid !important;
+  gap: 1rem !important;
+  grid-template-columns: 1fr !important;
+}
+
+@media (min-width: 600px) {
+  .paymentMethodsGrid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+.paymentCard {
+  cursor: pointer !important;
+  border: 2px solid transparent !important;
+  transition: all 0.2s ease !important;
+}
+
+.paymentCard:hover {
+  border-color: #7f6000 !important;
+}
+
+.paymentCardSelected {
+  border-color: #7f6000 !important;
+  background-color: rgba(127, 96, 0, 0.05) !important;
+}
+
+/* Shipping Method Cards */
+.shippingMethodsGrid {
+  display: grid !important;
+  gap: 1rem !important;
+  grid-template-columns: 1fr !important;
+}
+
+@media (min-width: 600px) {
+  .shippingMethodsGrid {
+    grid-template-columns: 1fr 1fr 1fr !important;
+  }
+}
+
+/* Summary Cards */
+.summaryCardsContainer {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1rem !important;
+}
+
+.summaryCard {
+  margin-bottom: 1rem !important;
+}
+
+.summaryCardTitle {
+  margin-bottom: 1rem !important;
+}
+
+/* Navigation Buttons */
+.navigationButtons {
+  display: flex !important;
+  justify-content: space-between !important;
+  margin-top: 2rem !important;
+}
+
+.backButton {
+  margin-right: 0.5rem !important;
+}
+
+.spacer {
+  flex: 1 1 auto !important;
+}
+
+/* Order Summary Sidebar */
+.orderSummarySection {
+  flex: 1 !important;
+}
+
+@media (min-width: 900px) {
+  .orderSummarySection {
+    flex: 1 !important;
+  }
+}
+
+.orderSummaryCard {
+  padding: 1.5rem !important;
+  position: static !important;
+  height: fit-content !important;
+  z-index: 10 !important;
+}
+
+@media (min-width: 900px) {
+  .orderSummaryCard {
+    position: sticky !important;
+    top: 2rem !important;
+    max-height: calc(100vh - 4rem) !important;
+    overflow-y: auto !important;
+    align-self: flex-start !important;
+    will-change: transform !important;
+    transform: translateZ(0) !important;
+    backface-visibility: hidden !important;
+    inset: 2rem auto auto auto !important;
+  }
+
+  .checkoutPage .mainContent {
+    overflow: visible !important;
+  }
+
+  .orderSummarySection {
+    align-self: flex-start !important;
+    height: auto !important;
+  }
+}
+
+.orderSummaryTitle {
+  margin-bottom: 1rem !important;
+  text-align: right !important;
+}
+
+.orderItem {
+  margin-bottom: 1rem !important;
+}
+
+.orderItemRow {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+.divider {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.totalRow {
+  display: flex !important;
+  justify-content: space-between !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.totalRowLast {
+  display: flex !important;
+  justify-content: space-between !important;
+  margin-bottom: 1rem !important;
+}
+
+.finalTotalRow {
+  display: flex !important;
+  justify-content: space-between !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Empty Cart State */
+.emptyCart {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 60vh !important;
+  text-align: center !important;
+  direction: rtl !important;
+}
+
+.emptyCartTitle {
+  margin-bottom: 1rem !important;
+}
+
+.emptyCartMessage {
+  margin-bottom: 1.5rem !important;
+  color: rgba(0, 0, 0, 0.6) !important;
+}

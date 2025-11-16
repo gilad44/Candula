@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "anka";
+  src: url("public/fonts/anka/ankaclm-bold-webfont.ttf") format("woff");
+}
+@font-face {
+  font-family: "dorian";
+  src: url("fonts/dorian/DorianCLM-Book.ttf") format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "dorian";
+  /* overflow: hidden; */
+}
+body {
+  direction: rtl;
+}
+
+html {
+  direction: rtl;
+}
+
+/* Animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes candleGlow {
+  0% {
+    opacity: 0.3;
+    transform: translateX(-50%) scale(1);
+  }
+  100% {
+    opacity: 0.1;
+    transform: translateX(-50%) scale(1.2);
+  }
+}
+
+.slide-in-up {
+  animation: slideInUp 0.6s ease-out;
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-in;
+}
+
+.bounce {
+  animation: bounce 2s infinite;
+}

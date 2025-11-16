@@ -1,0 +1,235 @@
+{
+  "info": {
+    "name": "Candula Contact API",
+    "description": "API endpoints for Candula contact form and admin management",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Public Endpoints",
+      "item": [
+        {
+          "name": "Submit Contact Form",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"subject\": \"Question about products\",\n  \"message\": \"Hi, I have a question about your candle products. Could you please provide more information about the ingredients used?\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8180/contact",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8180",
+              "path": ["contact"]
+            },
+            "description": "Submit a new contact form message (public endpoint)"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Admin Endpoints (Require Authentication)",
+      "item": [
+        {
+          "name": "Get All Contacts",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "x-auth-token",
+                "value": "{{admin_token}}",
+                "description": "Admin JWT token"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8180/contact",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8180",
+              "path": ["contact"]
+            },
+            "description": "Get all contact messages (admin only)"
+          }
+        },
+        {
+          "name": "Get All Contacts with Status Filter",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "x-auth-token",
+                "value": "{{admin_token}}",
+                "description": "Admin JWT token"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8180/contact?status=new",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8180",
+              "path": ["contact"],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "new",
+                  "description": "Filter by status: new, read, replied, resolved"
+                }
+              ]
+            },
+            "description": "Get contacts filtered by status"
+          }
+        },
+        {
+          "name": "Get Contact by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "x-auth-token",
+                "value": "{{admin_token}}",
+                "description": "Admin JWT token"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8180/contact/{{contact_id}}",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8180",
+              "path": ["contact", "{{contact_id}}"]
+            },
+            "description": "Get a specific contact message by ID"
+          }
+        },
+        {
+          "name": "Update Contact Status",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-auth-token",
+                "value": "{{admin_token}}",
+                "description": "Admin JWT token"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"read\",\n  \"adminNotes\": \"Reviewed the message, will follow up tomorrow.\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8180/contact/{{contact_id}}/status",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8180",
+              "path": ["contact", "{{contact_id}}", "status"]
+            },
+            "description": "Update contact message status and add admin notes"
+          }
+        },
+        {
+          "name": "Update Contact Message",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-auth-token",
+                "value": "{{admin_token}}",
+                "description": "Admin JWT token"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"priority\": \"high\",\n  \"adminNotes\": \"Customer needs urgent response regarding bulk order\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8180/contact/{{contact_id}}",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8180",
+              "path": ["contact", "{{contact_id}}"]
+            },
+            "description": "Update contact message details"
+          }
+        },
+        {
+          "name": "Delete Contact Message",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "x-auth-token",
+                "value": "{{admin_token}}",
+                "description": "Admin JWT token"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8180/contact/{{contact_id}}",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8180",
+              "path": ["contact", "{{contact_id}}"]
+            },
+            "description": "Delete a contact message (admin only)"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Authentication",
+      "item": [
+        {
+          "name": "Admin Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"admin@test.com\",\n  \"password\": \"your_admin_password\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8180/users/login",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8180",
+              "path": ["users", "login"]
+            },
+            "description": "Login as admin to get JWT token for protected endpoints"
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "admin_token",
+      "value": "",
+      "type": "string",
+      "description": "JWT token for admin authentication"
+    },
+    {
+      "key": "contact_id",
+      "value": "",
+      "type": "string",
+      "description": "ID of a contact message"
+    }
+  ]
+}

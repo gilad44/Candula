@@ -1,0 +1,95 @@
+/* Container */
+.container {
+  max-width: 1000px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding: 1.5rem !important;
+  direction: rtl !important;
+}
+
+/* Empty States */
+.emptyState {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 60vh !important;
+  text-align: center !important;
+  direction: rtl !important;
+}
+
+.emptyTitle {
+  margin-bottom: 1rem !important;
+}
+
+.emptyMessage {
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Page Title */
+.pageTitle {
+  margin-bottom: 2rem !important;
+}
+
+/* Order Card Container */
+.orderCardContainer {
+  width: 100% !important;
+}
+
+/* Order Header */
+.orderHeader {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  margin-bottom: 1rem !important;
+}
+
+.orderDate {
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Order Items Section */
+.orderItemsSection {
+  margin-bottom: 1rem !important;
+}
+
+.orderItemsTitle {
+  margin-bottom: 0.5rem !important;
+}
+
+.orderItem {
+  display: flex !important;
+  justify-content: space-between !important;
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+}
+
+/* Order Footer */
+.orderFooter {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.12) !important;
+  padding-top: 1rem !important;
+}
+
+.orderTotal {
+  font-weight: bold !important;
+}
+
+/* Tracking Number */
+.trackingBox {
+  margin-top: 1rem !important;
+  padding: 1rem !important;
+  background-color: rgba(33, 150, 243, 0.08) !important;
+  border-radius: 0.25rem !important;
+}
+
+/* Notes */
+.notesBox {
+  margin-top: 1rem !important;
+}
+
+.notesText {
+  color: rgba(0, 0, 0, 0.6) !important;
+}
