@@ -223,7 +223,6 @@ const CheckoutWithCSSModules = () => {
       });
       setFormErrors(errors);
       toast.error("אנא מלא את כל השדות הנדרשים בצורה תקינה");
-      console.log("Validation errors:", errors); // Debug log
       return;
     } else {
       setFormErrors({});
@@ -231,16 +230,11 @@ const CheckoutWithCSSModules = () => {
 
     try {
       // Create order object (without userId as backend sets it from auth token)
-      console.log("Cart items before mapping:", cartItems); // Debug log
 
       const orderData = {
         items: cartItems.map((item) => {
-          console.log("Processing cart item:", item); // Debug log
-          console.log("Product object:", item.product); // Debug log
-          console.log("Product keys:", Object.keys(item.product || {})); // Debug log
           const productId =
             item.product?.id || item.product?.filename || item.productId;
-          console.log("Extracted productId:", productId); // Debug log
 
           return {
             productId: productId,
@@ -258,12 +252,9 @@ const CheckoutWithCSSModules = () => {
         shippingCost,
         tax,
       };
-      console.log("Order data being sent:", orderData); // Debug log
 
       // Send order to backend
-      console.log("Sending order to backend..."); // Debug log
       const savedOrder = await orderService.createOrder(orderData);
-      console.log("Order created successfully:", savedOrder); // Debug log
 
       // Update local state with the saved order
       dispatch(userActions.addOrder(savedOrder));

@@ -71,7 +71,6 @@ const AdminUsersWithCSSModules = () => {
       }
 
       const usersData = await response.json();
-      console.log("Users API response:", usersData); // Debug log
       // Ensure we always have an array
       const usersArray = Array.isArray(usersData) ? usersData : [];
       setUsers(usersArray);

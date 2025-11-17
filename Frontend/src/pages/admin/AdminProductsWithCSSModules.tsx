@@ -50,11 +50,7 @@ const AdminProductsWithCSSModules = () => {
   const loadProducts = async () => {
     try {
       setLoading(true);
-      console.log("Loading products from:", `${config.API_BASE_URL}/products`); // Debug log
-
       const response = await fetch(`${config.API_BASE_URL}/products`);
-
-      console.log("Products API response status:", response.status); // Debug log
 
       if (!response.ok) {
         console.warn("Backend API failed, using static data"); // Debug log

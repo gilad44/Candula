@@ -162,8 +162,6 @@ const UploadNewProductWithCSSModules: React.FC = () => {
     const typeValue = watch("type");
     const styleValue = watch("style");
 
-    console.log("🔍 Validation Check - Type:", typeValue, "Style:", styleValue);
-
     // Force validation of these specific fields
     if (typeValue === "" || styleValue === "") {
       trigger(["type", "style"]);
@@ -219,7 +217,6 @@ const UploadNewProductWithCSSModules: React.FC = () => {
         }
       });
 
-      console.log("Sending product data:", cleanedData);
       await axios.post(`${config.API_BASE_URL}/products`, cleanedData);
       toast.success("Product uploaded successfully!");
 
