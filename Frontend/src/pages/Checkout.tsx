@@ -24,9 +24,9 @@ import { orderService } from "../services/orderService";
 import { cartActions } from "../slices/cartSlice";
 import { userActions } from "../slices/userSlice";
 import type { RootState } from "../store/store";
+import styles from "../Styles/pages/Checkout.module.css";
 import type { Address, PaymentMethod, ShippingMethod } from "../types/User";
 import { checkoutSchema } from "../validation/schemas";
-import styles from "../Styles/pages/Checkout.module.css";
 
 const steps = ["פרטי משלוח", "אמצעי תשלום", "סיכום הזמנה"];
 

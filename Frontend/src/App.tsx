@@ -9,26 +9,26 @@ import { Route, Routes } from "react-router-dom";
 import AdminRoute from "./components/AdminRoute";
 import ContactForm from "./components/ContactForm";
 import ErrorBoundary from "./components/ErrorBoundary";
-import FooterWithCSSModules from "./components/FooterWithCSSModules";
-import NavbarWithCSSModules from "./components/NavbarWithCSSModules";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 import SessionWarning from "./components/SessionWarning";
 import { useAutoLogout } from "./hooks/useAutoLogout";
 import { useAppDispatch } from "./hooks/useRedux";
-import AboutWithCSSModules from "./pages/AboutWithCSSModules";
-import AdminContactsWithCSSModules from "./pages/admin/AdminContactsWithCSSModules";
-import AdminDashboardWithCSSModules from "./pages/admin/AdminDashboardWithCSSModules";
-import AdminOrdersWithCSSModules from "./pages/admin/AdminOrdersWithCSSModules";
-import AdminProductsWithCSSModules from "./pages/admin/AdminProductsWithCSSModules";
-import AdminUsersWithCSSModules from "./pages/admin/AdminUsersWithCSSModules";
-import CheckoutWithCSSModules from "./pages/CheckoutWithCSSModules";
-import FavoritesWithCSSModules from "./pages/FavoritesWithCSSModules";
-import HomeWithCSSModules from "./pages/HomeWithCSSModules";
-import NotFoundWithCSSModules from "./pages/NotFoundWithCSSModules";
-import OrdersWithCSSModules from "./pages/OrdersWithCSSModules";
-import ProductDetailWithCSSModules from "./pages/ProductDetailWithCSSModules";
-import ProductsWithCSSModules from "./pages/ProductsWithCSSModules";
-import ProfileWithCSSModules from "./pages/ProfileWithCSSModules";
-import UploadNewProductWithCSSModules from "./pages/UploadNewProductWithCSSModules";
+import About from "./pages/About";
+import AdminContacts from "./pages/admin/AdminContacts";
+import AdminDashboard from "./pages/admin/AdminDashboard";
+import AdminOrders from "./pages/admin/AdminOrders";
+import AdminProducts from "./pages/admin/AdminProducts";
+import AdminUsers from "./pages/admin/AdminUsers";
+import Checkout from "./pages/Checkout";
+import Favorites from "./pages/Favorites";
+import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
+import Orders from "./pages/Orders";
+import ProductDetail from "./pages/ProductDetail";
+import Products from "./pages/Products";
+import Profile from "./pages/Profile";
+import UploadNewProduct from "./pages/UploadNewProduct";
 import { cartActions } from "./slices/cartSlice";
 import type { RootState } from "./store/store";
 import "./Styles/index.css";
@@ -59,19 +59,19 @@ const App = () => {
 
   return (
     <ErrorBoundary>
-      <NavbarWithCSSModules />
+      <Navbar />
       <Routes>
-        <Route path="/" element={<HomeWithCSSModules />} />
-        <Route path="/products" element={<ProductsWithCSSModules />} />
-        <Route path="/products/:id" element={<ProductDetailWithCSSModules />} />
-        <Route path="/about" element={<AboutWithCSSModules />} />
-        <Route path="/favorites" element={<FavoritesWithCSSModules />} />
-        <Route path="/checkout" element={<CheckoutWithCSSModules />} />
-        <Route path="/orders" element={<OrdersWithCSSModules />} />
-        <Route path="/profile" element={<ProfileWithCSSModules />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/products/:id" element={<ProductDetail />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/favorites" element={<Favorites />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/orders" element={<Orders />} />
+        <Route path="/profile" element={<Profile />} />
         <Route
           path="/upload-product"
-          element={<UploadNewProductWithCSSModules />}
+          element={<UploadNewProduct />}
         />
 
         {/* Admin Routes */}
@@ -79,7 +79,7 @@ const App = () => {
           path="/admin"
           element={
             <AdminRoute>
-              <AdminDashboardWithCSSModules />
+              <AdminDashboard />
             </AdminRoute>
           }
         />
@@ -87,7 +87,7 @@ const App = () => {
           path="/admin/orders"
           element={
             <AdminRoute>
-              <AdminOrdersWithCSSModules />
+              <AdminOrders />
             </AdminRoute>
           }
         />
@@ -95,7 +95,7 @@ const App = () => {
           path="/admin/users"
           element={
             <AdminRoute>
-              <AdminUsersWithCSSModules />
+              <AdminUsers />
             </AdminRoute>
           }
         />
@@ -103,7 +103,7 @@ const App = () => {
           path="/admin/products"
           element={
             <AdminRoute>
-              <AdminProductsWithCSSModules />
+              <AdminProducts />
             </AdminRoute>
           }
         />
@@ -111,14 +111,14 @@ const App = () => {
           path="/admin/contacts"
           element={
             <AdminRoute>
-              <AdminContactsWithCSSModules />
+              <AdminContacts />
             </AdminRoute>
           }
         />
 
-        <Route path="*" element={<NotFoundWithCSSModules />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
-      <FooterWithCSSModules />
+      <Footer />
       {/* Floating Contact Button & WhatsApp */}
       <Box
         sx={{

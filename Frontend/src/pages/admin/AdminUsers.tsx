@@ -21,8 +21,8 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { config } from "../../config/config";
-import type { User } from "../../types/User";
 import styles from "../../Styles/pages/admin/AdminUsers.module.css";
+import type { User } from "../../types/User";
 
 const AdminUsersWithCSSModules = () => {
   const [users, setUsers] = useState<User[]>([]);
