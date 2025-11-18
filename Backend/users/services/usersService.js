@@ -136,7 +136,7 @@ exports.processGoogleAuth = async (credential) => {
           zip: "",
         },
         image: { url: picture || "", alt: name },
-        role: "regular",
+        role: "user",
         isActive: true,
         googleId,
       };
