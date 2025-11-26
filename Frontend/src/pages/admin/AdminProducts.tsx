@@ -153,7 +153,7 @@ const AdminProductsWithCSSModules = () => {
         <Button
           variant="contained"
           color="primary"
-          onClick={() => window.open("/upload-product", "_blank")}
+          onClick={() => navigate("/upload-product")}
           className={styles.addProductButton}
         >
           הוסף מוצר חדש
